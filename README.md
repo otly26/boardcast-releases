@@ -37,8 +37,12 @@ Ihihiwalay ng installer ang mga user file mo — hindi nito binubura ang `bgm/`,
 
 ## 📝 Mga bersyon
 
-### 2.4 — 2026-11-05
+### 2.4 — 2026-11-05 (muling na-build 2026-11-06)
 
+- **Auto-updater:** kusang nagche-check ng bagong release pagbukas ng app
+  (minsan kada 24 oras). May **Check for updates** din sa Settings → About at
+  **F12** shortcut. Kapag may bagong bersyon, ang app na ang magda-download at
+  magpapatakbo ng installer.
 - Ayos sa **crossfade**: tamang haba na ang fade kahit mas mahaba ito kaysa sa
   kanta, at hindi na napuputol ang susunod na track.
 - Hindi na lumilihis ang timing kapag binago ang haba ng crossfade habang
