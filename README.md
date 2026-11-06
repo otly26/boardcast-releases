@@ -11,6 +11,7 @@ Ang installer ay isang `.exe` na file sa ilalim ng **Assets** ng bawat release.
 
 | Bersyon | File | Petsa |
 |---|---|---|
+| **2.4.1** | **`BOARDCAST_Setup_2.4.1.exe` (247.5 MB)** | **2026-11-07** |
 | 2.4 | `BOARDCAST_Setup_2.4.exe` (~248 MB) | 2026-11-05 |
 
 ## 💻 Kailangan
@@ -36,6 +37,21 @@ Ihihiwalay ng installer ang mga user file mo — hindi nito binubura ang `bgm/`,
 `.boardcast_config.json`). Gayunman, mag-backup pa rin bago mag-upgrade.
 
 ## 📝 Mga bersyon
+
+### 2.4.1 — 2026-11-07
+
+- **Equalizer:** 12 bands (31 Hz hanggang 20 kHz), 2.5-octave ang lapad,
+  **-10 dB hanggang +10 dB** kada band, may 13 preset.
+- **Screen reader fix sa equalizer:** ang bawat band slider ay nagbabasa na ng
+  totoong dB (-10 … 0 … 10). Dati, porsyento ang iniuulat ng Windows trackbar,
+  kaya “50” ang naririnig kapag flat at “100” kapag +10.
+- **Line In 1 / 2 / 3:** may hiwalay nang level kada input (0–100 %), tama ang
+  pagpili ng device kahit “Default” ang naka-set, at hindi na nawawala ang
+  cable loopback kapag may ibang input.
+- **Mic:** hindi na pinapatay ang mic kapag naka-auto ang mix papunta sa
+  broadcast.
+- Kung **2.4** ang naka-install, awtomatikong io-offer ito ng app sa susunod
+  na check (o Settings → About → Check for updates).
 
 ### 2.4 — 2026-11-05 (muling na-build 2026-11-06)
 
