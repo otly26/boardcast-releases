@@ -40,6 +40,18 @@ stations, radio at Library state). Gayunman, mag-backup pa rin bago mag-upgrade.
 
 ## 📝 Mga bersyon
 
+### 2.4.4 — 2026-11-10
+
+- **Automatic update check:** bawat pagbukas ng app ay may check agad, at may
+  panibagong check kada 15 minuto habang bukas ito — hindi na kailangang
+  maghintay ng 24 oras o pindutin ang Check for updates. Kapag pinili mong
+  **No** sa isang bersyon, hindi na ito mag-prompt muli para doon sa parehong
+  session; maagang-aalok lang ulit kapag may mas bagong release o bagong
+  bukas ng app.
+
+> Hindi pa nailalabas ang `BOARDCAST_Setup_2.4.4.exe` — isasama ito sa
+> releases page kapag na-build na ang installer.
+
 ### 2.4.3 — 2026-11-10
 
 - **YouTube Music na ang source:** ang Downloader search ay nagtatanong na sa
