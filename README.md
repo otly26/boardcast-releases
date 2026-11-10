@@ -11,7 +11,7 @@ Ang installer ay isang `.exe` na file sa ilalim ng **Assets** ng bawat release.
 
 | Bersyon | File | Petsa |
 |---|---|---|
-| **2.4.3** | **`BOARDCAST_Setup_2.4.3.exe`** | **2026-11-09** |
+| **2.4.3** | **`BOARDCAST_Setup_2.4.3.exe`** | **2026-11-10** |
 | 2.4.2 | `BOARDCAST_Setup_2.4.2.exe` (247.5 MB) | 2026-11-08 |
 | 2.4.1 | `BOARDCAST_Setup_2.4.1.exe` (247.5 MB) | 2026-11-07 |
 | 2.4 | `BOARDCAST_Setup_2.4.exe` (~248 MB) | 2026-11-05 |
@@ -40,7 +40,7 @@ stations, radio at Library state). Gayunman, mag-backup pa rin bago mag-upgrade.
 
 ## 📝 Mga bersyon
 
-### 2.4.3 — 2026-11-09
+### 2.4.3 — 2026-11-10
 
 - **YouTube Music na ang source:** ang Downloader search ay nagtatanong na sa
   YouTube Music at **art tracks lang** (Topic) ang inililista — ang mga kanta
