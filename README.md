@@ -11,7 +11,8 @@ Ang installer ay isang `.exe` na file sa ilalim ng **Assets** ng bawat release.
 
 | Bersyon | File | Petsa |
 |---|---|---|
-| **2.4.3** | **`BOARDCAST_Setup_2.4.3.exe`** | **2026-11-10** |
+| **2.4.4** | **`BOARDCAST_Setup_2.4.4.exe`** (247.5 MB) | **2026-11-10** |
+| 2.4.3 | `BOARDCAST_Setup_2.4.3.exe` (247.5 MB) | 2026-11-10 |
 | 2.4.2 | `BOARDCAST_Setup_2.4.2.exe` (247.5 MB) | 2026-11-08 |
 | 2.4.1 | `BOARDCAST_Setup_2.4.1.exe` (247.5 MB) | 2026-11-07 |
 | 2.4 | `BOARDCAST_Setup_2.4.exe` (~248 MB) | 2026-11-05 |
@@ -48,9 +49,14 @@ stations, radio at Library state). Gayunman, mag-backup pa rin bago mag-upgrade.
   **No** sa isang bersyon, hindi na ito mag-prompt muli para doon sa parehong
   session; maagang-aalok lang ulit kapag may mas bagong release o bagong
   bukas ng app.
+- **Isang prompt lang:** habang nakabukas ang update window, hindi na
+  nagbubukas ng panibagong prompt ang timer, kaya hindi nagkakapatong ang mga
+  dialog. Sinusundan na rin ng **Automatic update check** checkbox sa
+  Settings -> About ang bagong timer.
+- **Help:** na-update ang nakasulat sa Help tungkol sa update check.
 
-> Hindi pa nailalabas ang `BOARDCAST_Setup_2.4.4.exe` — isasama ito sa
-> releases page kapag na-build na ang installer.
+`BOARDCAST_Setup_2.4.4.exe` — 247.5 MB (259,554,518 bytes), SHA-256
+`6d45e70d94b385d10e87803d3eee23498f2102554678744e333f71add0a5b2e4`.
 
 ### 2.4.3 — 2026-11-10
 
