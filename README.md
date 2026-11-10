@@ -11,7 +11,9 @@ Ang installer ay isang `.exe` na file sa ilalim ng **Assets** ng bawat release.
 
 | Bersyon | File | Petsa |
 |---|---|---|
-| **2.4.1** | **`BOARDCAST_Setup_2.4.1.exe` (247.5 MB)** | **2026-11-07** |
+| **2.4.3** | **`BOARDCAST_Setup_2.4.3.exe`** | **2026-11-09** |
+| 2.4.2 | `BOARDCAST_Setup_2.4.2.exe` (247.5 MB) | 2026-11-08 |
+| 2.4.1 | `BOARDCAST_Setup_2.4.1.exe` (247.5 MB) | 2026-11-07 |
 | 2.4 | `BOARDCAST_Setup_2.4.exe` (~248 MB) | 2026-11-05 |
 
 ## 💻 Kailangan
@@ -33,10 +35,78 @@ Ang installer ay isang `.exe` na file sa ilalim ng **Assets** ng bawat release.
 ## ✅ Bago mag-install
 
 Ihihiwalay ng installer ang mga user file mo — hindi nito binubura ang `bgm/`,
-`playlist/`, `library/`, `recordings/`, at ang mga config (`bc_stations.json`,
-`.boardcast_config.json`). Gayunman, mag-backup pa rin bago mag-upgrade.
+`playlist/`, `library/`, `recordings/`, at ang buong `config/` folder (settings,
+stations, radio at Library state). Gayunman, mag-backup pa rin bago mag-upgrade.
 
 ## 📝 Mga bersyon
+
+### 2.4.3 — 2026-11-09
+
+- **YouTube Music na ang source:** ang Downloader search ay nagtatanong na sa
+  YouTube Music at **art tracks lang** (Topic) ang inililista — ang mga kanta
+  na sariling upload ng label, nasa "<Artist> - Topic" channel. Iyon ang
+  malinis na album audio, kaya walang intro, outro, o boses na nag-uusap sa
+  dulo ng na-download na kanta. Wala na sa listahan ang music video at
+  ordinaryong upload.
+- **Library tab:** ang **Search YouTube Playlist** ay sa YouTube pa rin
+  naghahanap at **marami ang resulta** — hanggang ~40 playlist sa isang
+  search. Naka-priority lang ngayon ang mga **playlist na puro Topic** (art
+  track) na nasa unahan, kaya walang intro, outro o boses na nag-uusap sa
+  dulo kapag iyon ang pinili. May nakasulat na track count sa mga iyon,
+  pareho ng ilalabas ng Library kapag binuksan. Sumusunod pa rin sa
+  listahan ang ibang resulta, kaya may laman ang listahan kahit puro music
+  video ang playlist ng isang genre gaya ng OPM. Ganoon pa rin ang Open,
+  Add to Library, Back to Search Results at ang pasted na playlist link
+  (bukas agad, walang check).
+- **Crossfade:** **fixed na 16 segundo** na sa lahat ng pagpalit ng kanta —
+  Playlist tab, Library tab at Settings > Audio. Tinanggal na ang chooser
+  (Off / 2 / 3 / 4 / 6 / … hanggang 20 segundo) sa tatlong lugar, kaya iisa
+  lang ang tunog sa lahat ng transition at walang setting na makakalimutang
+  ibalik.
+- **Playlist, mabilis nang mag-play:** pagpindot ng Enter, tumutugtog agad
+  ang kanta. In-app na ang MP3 decoding (libsndfile) sa halip na bagong
+  FFmpeg process bawat kanta, at ang samplerate at haba ng bawat file ay
+  sinusukat na sa background pagbukas ng app. Mula ~1.1 s bumaba sa ~10 ms
+  ang simula; ang m4a, mp4 at webm ay sa FFmpeg pa rin, pero may naka-cache
+  nang file info kaya mabilis din ang ikalawang play.
+- **Eksakto ang tunog kapag patay ang equalizer:** ang Playlist at BGM ay
+  tumutugtog na nang **eksakto** tulad ng file mismo. Dati, ang mga kantang
+  hindi 44.1 kHz (hal. 48 kHz na MP3) ay hinahati-hati sa bawat block bago
+  i-resample, kaya nagkakaroon ng phase jitter at parang malabo ang tunog.
+  Ngayon tuloy-tuloy ang resampling sa buong kanta — sinusukat na
+  kapareho (max difference 0.0000001) ng isang buong resample ng file — at
+  mas magaan pa sa CPU (mga 0.7 ms kada block, dati 1.3 ms). Ang equalizer
+  lang ang nagbabago ng tunog, at kapag naka-off ito o flat ang lahat ng
+  band, dumadaan ang audio nang walang pinagbabago.
+- **Malinis ang app folder — `config\`:** nasa isang `config\` folder na
+  ang lahat ng `.json` ng app — ang settings (`.boardcast_config.json`),
+  broadcast stations (`bc_stations.json`), saved radio
+  (`boardcast_radio_stations.json`) at Library state
+  (`boardcast_online_playlists.json`) — kaya wala nang nakakalat na file sa
+  tabi ng exe. Awtomatikong inililipat doon ang lumang file sa unang
+  pagbukas, kaya walang nawawalang station, radio o setting kapag
+  nag-update; hindi rin ito binubura ng installer.
+- **Help at changelog:** na-update ang mga nakasulat tungkol sa search sa
+  Downloader at Library, sa fixed na crossfade, at sa mas mabilis na simula
+  ng Playlist.
+
+### 2.4.2 — 2026-11-07
+
+- **Help tab:** may bagong **Help** tab sa dulo ng tab bar — kumpletong user
+  manual ng app, naka-topic (11 na seksyon, 38 na paksa): Getting Started,
+  Keyboard, Soundboard and BGM, Playlist, Library, Radio, Broadcast, Audio,
+  Downloader, Settings, at Other. Sinasaklaw nito ang lahat ng feature, key,
+  setting, folder at karaniwang problema, at nakasulat sa English.
+- **F1:** binubuksan ang Help mula sa kahit anong tab. Ang kaliwa ay listahan
+  ng seksyon at paksa (arrow keys, Right/Left para mag-expand), ang kanan ay
+  read-only na teksto na binabasa ng screen reader line by line. Enter sa isang
+  paksa ay inililipat ang focus sa teksto; ang pagpili ng seksyon ay
+  nagpapakita ng listahan ng mga paksa nito, kaya hindi kailanman blangko ang
+  pane.
+- **Changelog:** may bagong entry tungkol sa Help tab at F1, at inayos ang
+  lumang linyang nagsasabing may sariling queue ang Library (wala na iyon).
+- **Bersyon:** 2.4.2 — kung **2.4.1** ang naka-install, awtomatikong io-offer
+  ito ng app sa susunod na check (o Settings → About → Check for updates).
 
 ### 2.4.1 — 2026-11-07
 
